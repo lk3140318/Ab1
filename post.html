@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Title - Movie/Series Hub</title> <!-- Title will be updated by JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MovieHub</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+
+        <div id="loading-post" class="text-center my-5">
+             <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div id="post-content" class="d-none"> <!-- Hide until loaded -->
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <h1 id="post-title" class="mb-3">Post Title</h1>
+                    <img id="post-banner" src="" class="img-fluid rounded mb-4" alt="Post Banner">
+                    <h2>Description</h2>
+                    <p id="post-description" class="lead">Loading description...</p>
+
+                    <hr class="my-4">
+
+                     <!-- Download Buttons Section -->
+                     <div class="card shadow-sm mb-4">
+                         <div class="card-header">
+                             <h5 class="mb-0">Download Options</h5>
+                         </div>
+                         <div class="card-body">
+                            <div id="download-buttons" class="d-grid gap-2 d-md-flex">
+                                <!-- Buttons added by JS -->
+                                <!-- Example: <a href="#" class="btn btn-warning fw-bold">Download 1080p</a> -->
+                            </div>
+                         </div>
+                     </div>
+
+                    <hr class="my-4">
+
+                    <!-- Comments Section -->
+                    <h3 class="mb-3">Comments (<span id="comment-count">0</span>)</h3>
+                    <div id="comments-list" class="mb-4">
+                        <!-- Comments loaded here -->
+                        <p id="loading-comments" class="text-muted">Loading comments...</p>
+                    </div>
+
+                    <!-- Add Comment Form -->
+                    <h4>Leave a Comment</h4>
+                    <form id="comment-form">
+                        <input type="hidden" id="post-id-field" value="">
+                        <div class="mb-3">
+                            <label for="comment-username" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="comment-username" required maxlength="100">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment-text" class="form-label">Comment *</label>
+                            <textarea class="form-control" id="comment-text" rows="4" required maxlength="1000"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-comment-btn">Submit Comment</button>
+                        <div id="comment-message" class="mt-3"></div>
+                    </form>
+                </div>
+
+                <!-- Sidebar Column (Optional) -->
+                <div class="col-lg-4">
+                    <div class="card sticky-top" style="top: 20px;"> <!-- Basic sticky sidebar -->
+                        <div class="card-body">
+                            <h5 class="card-title">Post Details</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Views:</strong> <span id="view-count">0</span></li>
+                                <li><strong>Posted:</strong> <span id="post-date">Loading...</span></li>
+                                <!-- Add more details if needed -->
+                            </ul>
+                            <!-- Maybe add related posts here later -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+     <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            © 2023 MovieHub. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="js/post.js"></script>
+</body>
+</html>
