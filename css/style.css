@@ -1,0 +1,74 @@
+/* General Styling */
+body {
+    font-family: sans-serif;
+}
+
+/* Mimic Amazon Button Style */
+.btn-warning.fw-bold {
+    background-color: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+.btn-warning.fw-bold:hover {
+    background-color: #ddb347;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.card-img-top {
+    aspect-ratio: 2 / 3; /* Maintain movie poster aspect ratio */
+    object-fit: cover; /* Cover the area without distortion */
+}
+.card-title a {
+    color: #0f1111; /* Amazon-like title color */
+    text-decoration: none;
+}
+.card-title a:hover {
+    color: #c7511f; /* Amazon hover color */
+    text-decoration: underline;
+}
+.card-footer {
+    background-color: #fff; /* Ensure footer is white */
+    border-top: none; /* Remove default top border if needed */
+}
+
+/* Post Page Banner */
+#post-banner {
+    max-height: 400px; /* Limit banner height */
+    width: 100%;
+    object-fit: cover; /* Crop nicely */
+     object-position: center top; /* Focus on top part of image */
+}
+
+/* Comments Styling */
+#comments-list .comment {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#comments-list .comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+#comments-list .comment-meta {
+    font-size: 0.9em;
+    color: #555;
+}
+#comment-message.alert {
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+}
+
+/* Loading Spinner */
+#loading, #loading-post {
+    padding: 3rem 0;
+}
+
+/* Navbar */
+.navbar.bg-dark {
+    background-color: #232f3e !important; /* Override Bootstrap default dark */
+}
