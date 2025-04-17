@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie/Series Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MovieHub</a>
+            <!-- Optional: Add Search Bar Here -->
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h1 class="mb-4">Latest Releases</h1>
+
+        <div id="loading" class="text-center my-5">
+            <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="post-grid">
+            <!-- Posts will be loaded here by JavaScript -->
+            <!-- Example Card Structure (for reference):
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <a href="post.html?id=1">
+                       <img src="https://via.placeholder.com/300x450?text=Movie+Poster" class="card-img-top" alt="Post Title">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="post.html?id=1" class="text-decoration-none text-dark">Post Title</a></h5>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                         <div class="d-grid gap-2">
+                            <a href="#" class="btn btn-sm btn-warning fw-bold">Download 1080p</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Download 720p</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Download 480p</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             -->
+        </div>
+
+        <!-- Optional: Pagination Controls Here -->
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            © 2023 MovieHub. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
